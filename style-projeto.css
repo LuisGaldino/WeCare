@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    --default-border-radius: 1.2rem;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    
+}
+
+.content {
+    display: grid;
+    grid-template-areas: 
+        ".. . . ."
+        ".. hero form ."
+        ".. hero form ."
+        /* ". . . ." */
+    ;
+    gap: 12rem;
+}
+
+aside .hero-img {
+    height: 32rem;
+    transform: rotateY(180deg)
+}
+
+main {
+    grid-area: form;
+}
+
+aside {
+    grid-area: hero;
+    text-align: center;
+}
+
+aside h1 {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 7.5rem;
+}
+
+aside h1 span, main h2 span {
+    color: #FF5678;
+}
+
+main {
+    width: 55rem;
+    height: 40rem;
+    /* border: 0.1rem solid rgba(0, 0, 0, 0.15); */
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+    padding: 3.4rem 4.4rem ;
+    position: relative;
+}
+
+main h2 {
+    max-width: 45rem;
+    font-size: 3.6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+main .actions {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main .actions a {
+    height: 5.5rem;
+    text-decoration: none;
+    background-color: #FF5678 /*1485c7*/ ;
+    margin-top: 2.4rem;
+    font-family: poppins, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    border-radius: var(--default-border-radius);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+main .actions a + a {
+    background-color: #1485c7;
+    margin-top: 2.4rem;
+}
+
+
+main header {
+    display: flex;
+    gap: 0 1.5rem;
+
+    /* justify-content: center; */
+    align-items: center;
+}
+
+main header i {
+    color: #000;
+    font-size: 2.4rem;    
+}
+
+
+main form {
+    margin-top: 1.6rem;
+}
+
+main form label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    /* margin-bottom: 1rem; */
+    display: block;
+    
+}
+
+/* A mesma regra esta sendo aplicada na secao selec que é o dropdown e na secao input que é os quadros pra escrever*/
+main form :is(input, select) {
+    width: 48.9rem;
+    height: 5.5rem;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+
+
+    background-color: #FFF;
+    /* border: 0.1rem solid rgba(0, 0, 0, 0.15); */
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+}
+
+main form select {
+    appearance: none;
+    /* cursor: pointer; */
+}
+
+
+main form .select-div {
+    position: relative;
+}
+
+
+main form .select-div::after{
+    top: 1.6rem;
+    right: 1rem;
+    content: '\f107';
+    font-size: 2.4rem;
+    color: #FF5678;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    position: absolute;
+    z-index: 1;
+}
+
+select .fa-cat {
+    width: 100px;
+}
+
+
+main #footer-form > p {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    
+    text-align: center;
+    
+}
+
+
+main #footer-form > a {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #FF5678;
+
+    display: flex;
+    justify-content: center;
+}
+
+main #footer-form > a:hover {
+    font-size: 2.3rem;
+    color: #FF5678;
+    transition: font-size 0.3s;
+}
+
+main form .points {
+    position: relative;
+}
+
+main form input + button {
+    position: absolute;
+    right: 1.1rem;
+    top: calc(2.7rem + 1.1rem);
+    font-size: 2.4rem;
+    background-color: transparent;
+    color: #1485c7;
+    border: none;
+    cursor: pointer;
+}
+
+
